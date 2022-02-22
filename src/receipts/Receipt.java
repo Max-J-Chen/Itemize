@@ -26,7 +26,7 @@ public class Receipt {
     public List<Item> parseReceipt(String rawText, List<String> userNames) {
 
         // Instantiates regex
-        String regexDollar = "((([1-9]\\d{0,2}(,\\d{3})*)|(([1-9]\\d*)?\\d))(\\.\\d\\d))";
+        String regexDollar = "((([1-9]\\d{0,2}(,\\d{3})*)|(([1-9]\\d*)?\\d))(\\.\\d\\d))"; // TODO add regex comment for later
         String regexItemID = "\\d{12}";
 
         // Puts each line into a list
@@ -61,17 +61,13 @@ public class Receipt {
             }
         }
 
-
         // TEST: print each item's name, ID, and price
         /*
         for (Item currentItem : itemList) {
             System.out.println(currentItem.getItemName() + " " +
                     currentItem.getUniqueID() + " " +
                     currentItem.getItemPrice());
-
         }
-
-
          */
 
         return itemList;
